@@ -1,0 +1,46 @@
+.ui-center {
+  @include center;
+}
+
+.col-half {
+  @include column(1/2);
+}
+
+.ui-row{
+  display: flex;
+  align-items: center;
+}
+
+.ui-col{
+  width: 50%;
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ui-label{
+  font-size: 2.4rem;
+  color: $color-black;
+  font-weight: bold;
+}
+
+.ui-button{
+  font-size: 1.8rem;
+  color: #333333;
+  font-weight: bold;
+  max-width: 16rem;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .5s;
+  &:hover{
+    filter: brightness(80%);
+  }
+}

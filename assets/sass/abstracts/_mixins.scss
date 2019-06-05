@@ -1,0 +1,50 @@
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  } @else if $point == minDesktop {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 500px) {
+      @content;
+    }
+  } @else if $point == notebook {
+    @media (max-height: 700px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: 780px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (max-width: 1030px) {
+      @content;
+    }
+  }
+}
+
+@mixin hover($size, $bg, $color, $color-text) {
+  &:hover {
+    background-color: $bg;
+    box-shadow: inset 0 0 0 $size $color;
+    color: $color-text;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin centerAbsolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
