@@ -72,7 +72,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  transition: .7s;
+  transition: 0.7s;
   opacity: 0;
   a {
     width: calc(33% - 10px);
@@ -287,4 +287,15 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #092432;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(80%);
 }

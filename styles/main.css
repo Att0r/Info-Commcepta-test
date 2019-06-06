@@ -174,9 +174,29 @@ body {
   padding: 2rem 1rem;
   text-transform: uppercase;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 .ui-button:hover {
+  filter: brightness(80%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #092432;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
   filter: brightness(80%);
 }
 
@@ -317,7 +337,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  transition: .7s;
+  transition: 0.7s;
   opacity: 0;
 }
 .grp-cards a {
@@ -535,4 +555,13 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #092432;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(80%);
 }

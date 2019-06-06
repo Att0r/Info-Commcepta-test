@@ -6,28 +6,28 @@
   @include column(1/2);
 }
 
-.ui-row{
+.ui-row {
   display: flex;
   align-items: center;
 }
 
-.ui-col{
+.ui-col {
   width: 50%;
 }
 
-.container{
+.container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
 }
 
-.ui-label{
+.ui-label {
   font-size: 2.4rem;
   color: $color-black;
   font-weight: bold;
 }
 
-.ui-button{
+.ui-button {
   font-size: 1.8rem;
   color: #333333;
   font-weight: bold;
@@ -39,8 +39,28 @@
   padding: 2rem 1rem;
   text-transform: uppercase;
   cursor: pointer;
-  transition: .5s;
-  &:hover{
+  transition: 0.5s;
+  &:hover {
     filter: brightness(80%);
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #092432;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(80%);
 }
