@@ -16,10 +16,13 @@
 
   <header class="header">
     <div class="container">
-      <a href="#" class="header-logo">
+      <a href="#" class="header-logo" >
         <img src="../images/logo.png" alt="Logo Space Box">
       </a>
-      <ul class="header-menu">
+
+      <a id="nav-toggle" href="#"><span></span></a>
+
+      <ul class="header-menu" style="display: none">
         <a href="#">
           <li>Empresa</li>
         </a>
@@ -36,7 +39,7 @@
 
   <section>
     <div class="container">
-      <div class="card-destaque">
+      <div id="destaque" class="card-destaque">
         <div class="card-destaque-r">
           <img id="imagem" class="card-destaque-avatar" src="../images/avatar.png" alt="Avatar usuário">
           <ul class="card-destaque-dados">
@@ -78,6 +81,7 @@
 <script>
   jQuery(function () {
     home.init();
+    structure.init();
   });
 </script>
 

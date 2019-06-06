@@ -1,9 +1,24 @@
-jQuery(function () {
-  structure.init();
-});
-
 var structure = {
-  init: function () { }
+  init: function () {
+    this.btn();
+    this.scrollTo();
+  },
+
+  btn: function () {
+    $('#nav-toggle').click(function () {
+      $(this).toggleClass('active');
+    })
+  },
+
+  scrollTo: function () {
+    $('.scrollTo').click(function () {
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 500);
+      return false;
+    });
+  },
+
 };
 
 var home = {
@@ -22,6 +37,7 @@ var home = {
         array = profissinal.length;
         for (i = 0; i <= array; i++) {
           $(".grp-cards").append('\
+          <a href="#destaque" class="scrollTo">\
               <div class="card">\
                   <div class= "card-avatar" >\
                   <div class="avatar">\
@@ -37,14 +53,15 @@ var home = {
                   </div>\
               </div >\
             </div >\
+            </a>\
           ');
         }
       }
     });
-    $('.grp-cards .card:first').addClass('select');
+    $('.grp-cards .a:first').addClass('select');
 
-    $('.card').click(function(){
-      $(this).parent().find('.select').removeClass('select');
+    $('.card').click(function () {
+      $(this).parent().parent().find('.select').removeClass('select');
       $(this).addClass('select')
       var nome = $(this).find('.card-avatar').find('.card-info').find('.nome').text();
       var cargo = $(this).find('.card-avatar').find('.card-info').find('.cargo').text();

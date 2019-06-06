@@ -214,6 +214,50 @@ body {
   filter: brightness(80%);
 }
 
+#nav-toggle {
+  cursor: pointer;
+  padding: 17px 35px 16px 0px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 200ms ease-in-out;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
 .container {
   max-width: 1224px;
   width: 100%;
@@ -291,16 +335,26 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.grp-cards .card {
+.grp-cards a {
   width: calc(33% - 10px);
   margin-right: 20px;
-  padding: 30px;
   margin-bottom: 30px;
+}
+.grp-cards a:nth-child(3n) {
+  margin-right: 0px;
+}
+.grp-cards .card {
+  padding: 30px;
   cursor: pointer;
   box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
 }
-.grp-cards .card:nth-child(3n) {
-  margin-right: 0px;
+.grp-cards .card:hover {
+  transform: scale(1);
+}
+.grp-cards .card:not(:hover) {
+  opacity: 0.9;
+  transform: scale(0.98);
 }
 .grp-cards .card-avatar {
   display: -ms-flexbox;
@@ -360,4 +414,59 @@ body {
 .grp-cards .select .card-info .cargo {
   font-size: 20px;
   color: #fff;
+}
+
+@media (max-width: 1030px) {
+  .container {
+    max-width: 880px;
+  }
+
+  .grp-cards a {
+    width: calc(50%);
+    margin-right: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .grp-cards a {
+    width: 100%;
+  }
+
+  .grp-cards .card {
+    width: 100%;
+  }
+
+  .grp-cards .card-avatar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+  }
+
+  .grp-cards .card-avatar .avatar {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .card-destaque-r {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+
+  .card-destaque-avatar {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 300px;
+  }
+
+  .header-logo img {
+    width: 150px;
+  }
 }
