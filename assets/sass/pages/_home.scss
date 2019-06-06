@@ -72,6 +72,8 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  transition: .7s;
+  opacity: 0;
   a {
     width: calc(33% - 10px);
     margin-right: 20px;
@@ -234,5 +236,55 @@
   }
   .header-logo img {
     width: 150px;
+  }
+}
+
+.ui-widget-header {
+  transition: 2s;
+  background: #002b50;
+  border: none;
+}
+
+.funcionarios {
+  position: relative;
+}
+
+#progressbar {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #002b50;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

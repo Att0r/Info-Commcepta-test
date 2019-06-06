@@ -58,9 +58,16 @@ var home = {
             </div >\
             </a>\
           ');
+
+          if (i == 8 ){
+            $('#progressbar').fadeOut('fast');
+            $('.grp-cards').css('opacity', '1');
+          }
+
         }
       }
     });
+
     $('.grp-cards .a:first').addClass('select');
 
     $('.card').click(function () {
@@ -75,6 +82,7 @@ var home = {
       $('#txtidade').html(idade)
       $('#imagem').attr('src', foto)
     })
+
   },
 
 }

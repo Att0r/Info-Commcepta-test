@@ -23,5 +23,5 @@ npm install
 Para execução do projeto
 
 ```
-Gulp
+gulp
 ```
