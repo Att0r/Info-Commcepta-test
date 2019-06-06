@@ -72,7 +72,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  a{
+  a {
     width: calc(33% - 10px);
     margin-right: 20px;
     margin-bottom: 30px;
@@ -82,15 +82,14 @@
   }
 
   .card {
-    
     padding: 30px;
-    
+
     cursor: pointer;
     -webkit-box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
     transition: 0.5s;
-   
+
     &:hover {
       transform: scale(1);
     }
@@ -168,6 +167,41 @@
   }
 }
 
+@media (max-width: 800px) {
+  #nav-toggle {
+    z-index: 30;
+  }
+  .header {
+    position: relative;
+  }
+  .header-menu {
+    opacity: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 0vh;
+    z-index: 20;
+    padding: 0;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+  }
+  .active-menu {
+    height: 100vh;
+    opacity: 1;
+    display: flex;
+  }
+  .header-menu li {
+    color: #fff;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 500px) {
   .grp-cards a {
     width: 100%;
@@ -198,8 +232,7 @@
   .container {
     max-width: 300px;
   }
-  .header-logo img{
+  .header-logo img {
     width: 150px;
-    
   }
 }

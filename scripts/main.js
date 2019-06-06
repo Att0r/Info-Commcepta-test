@@ -7,7 +7,10 @@ var structure = {
   btn: function () {
     $('#nav-toggle').click(function () {
       $(this).toggleClass('active');
+      $('.header-menu').toggleClass('active-menu');
     })
+
+
   },
 
   scrollTo: function () {
