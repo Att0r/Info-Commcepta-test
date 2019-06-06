@@ -26,6 +26,8 @@
     "gulp-open": "*"
   },
   "dependencies": {
+    "clean-css": "^4.1.11",
+    "lodash": "^4.17.11",
     "sweetalert": "^2.1.0"
   }
 }
