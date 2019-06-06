@@ -332,6 +332,7 @@ body {
       align-items: center;
   position: absolute;
   right: 0;
+  top: 0;
 }
 .grp-cards .card-info {
   color: #002b50;

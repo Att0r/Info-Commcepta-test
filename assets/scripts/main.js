@@ -24,7 +24,8 @@ var home = {
           $(".grp-cards").append('\
               <div class="card">\
                   <div class= "card-avatar" >\
-                  <div class="avatar" style="background: url('+ profissinal[i].foto + ');" alt="Avatar usuário">\
+                  <div class="avatar">\
+                  <img src="'+ profissinal[i].foto + '" alt="Avatar usuário">\
                     <div class="num">\
                      '+ profissinal[i].id + '\
                     </div>\
@@ -48,9 +49,11 @@ var home = {
       var nome = $(this).find('.card-avatar').find('.card-info').find('.nome').text();
       var cargo = $(this).find('.card-avatar').find('.card-info').find('.cargo').text();
       var idade = $(this).find('.card-avatar').find('.card-info').find('.idade').text();
+      var foto = $(this).find('.card-avatar').find('.avatar').find('img').attr('src');
       $('#txtnome').html(nome)
       $('#txtcargo').html(cargo)
       $('#txtidade').html(idade)
+      $('#imagem').attr('src', foto)
     })
   },
 
