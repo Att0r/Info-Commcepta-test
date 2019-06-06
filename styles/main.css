@@ -556,12 +556,3 @@ body {
     transform: rotate(360deg);
   }
 }
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #092432;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  filter: brightness(80%);
-}

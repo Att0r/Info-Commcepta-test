@@ -68,7 +68,7 @@ var home = {
       }
     });
 
-    $('.grp-cards .a:first').addClass('select');
+    $('.grp-cards a:first').addClass('select');
 
     $('.card').click(function () {
       $(this).parent().parent().find('.select').removeClass('select');
