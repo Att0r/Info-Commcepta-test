@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "clean-css": "^4.1.11",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "sweetalert": "^2.1.0"
   }
 }
